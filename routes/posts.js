@@ -35,7 +35,8 @@ router.get('/', function (req, res) {
 
     //validation
     body('title').notEmpty(),
-    body('content').notEmpty()
+    body('content').notEmpty(),
+    body('angka').notEmpty()
 
 ], (req, res) => {
 
@@ -50,7 +51,8 @@ router.get('/', function (req, res) {
     //define formData
     let formData = {
         title: req.body.title,
-        content: req.body.content
+        content: req.body.content,
+        angka: req.body.angka
     }
 
     // insert query
@@ -131,7 +133,8 @@ router.get('/', function (req, res) {
     //data post
     let formData = {
         title: req.body.title,
-        content: req.body.content
+        content: req.body.content,
+        angka: req.body.angka
     }
 
     // update query
