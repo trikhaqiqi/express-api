@@ -36,7 +36,8 @@ router.get('/', function (req, res) {
     //validation
     body('title').notEmpty(),
     body('content').notEmpty(),
-    body('angka').notEmpty()
+    body('angka').notEmpty(),
+    body('date').notEmpty()
 
 ], (req, res) => {
 
@@ -52,7 +53,8 @@ router.get('/', function (req, res) {
     let formData = {
         title: req.body.title,
         content: req.body.content,
-        angka: req.body.angka
+        angka: req.body.angka,
+        date: req.body.date
     }
 
     // insert query
